@@ -1,0 +1,21 @@
+# This routes won't be active by default!
+# They can be enabled via Settings.yaml:
+#
+#Neos:
+#  Flow:
+#    mvc:
+#      routes:
+#        'Wwwision.CR.GraphQL':
+#          position: 'start'
+#          variables:
+#             # this can be replaced with any URL path you want to expose the API to
+#            path: 'graphql'
+-
+  name: 'GraphQL Endpoint'
+  uriPattern: '<path>'
+  defaults:
+    '@package':    't3n.GraphQL'
+    '@controller': 'GraphQL'
+    '@action':     'query'
+    'endpoint':    'Wwwision_CR_GraphQL'
+  httpMethods: [POST]

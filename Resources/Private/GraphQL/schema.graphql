@@ -1,0 +1,58 @@
+type Query {
+
+    """
+    Returns the root node of the Content Repository
+    """
+    rootNode: Node!
+
+    """
+    Returns a single node matching the specified identifier, if it exists
+    """
+    node(identifier: NodeIdentifier!): Node
+}
+
+"""
+A node in the Content Repository
+"""
+type Node {
+    identifier: NodeIdentifier!
+    name: NodeName!
+    type: NodeType!
+    properties: NodeProperties!
+    """
+    Direct children of this node
+    """
+    childNodes(filter: NodeTypeConstraints, limit: Int, offset: Int): [Node]!
+}
+
+"""
+The identifier of a node
+This is unique within a single workspace & dimension
+"""
+scalar NodeIdentifier
+
+"""
+Name of a node
+This is unique within its sibling nodes on the same tree level
+"""
+scalar NodeName
+
+"""
+Type of a node
+"""
+scalar NodeType
+
+"""
+Properties of a node
+"""
+scalar NodeProperties
+
+"""
+Filter the type of the nodes
+Allows complex expressions (e.g. "Neos.Neos:Page", "!Neos.Neos:Page,Neos.Neos:Text")
+"""
+scalar NodeTypeConstraints
+
+schema {
+    query: Query
+}

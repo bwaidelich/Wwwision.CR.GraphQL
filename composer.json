@@ -1,0 +1,21 @@
+{
+    "description": "Simple GraphQL API for the Neos Content Repository",
+    "type": "neos-package",
+    "name": "wwwision/cr-graphql",
+    "require": {
+        "neos/flow": "*",
+        "t3n/graphql": "^2.1",
+        "neos/content-repository": "^5.0",
+        "symfony/serializer": "^5.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Wwwision\\CrGraphQl\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Wwwision.CR.GraphQL"
+        }
+    }
+}

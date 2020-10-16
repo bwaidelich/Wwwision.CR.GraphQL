@@ -1,0 +1,22 @@
+t3n:
+  GraphQL:
+    endpoints:
+      'Wwwision_CR_GraphQL':
+        schemas:
+          root:
+            typeDefs: 'resource://Wwwision.CR.GraphQL/Private/GraphQL/schema.graphql'
+            resolvers:
+              Query: 'Wwwision\CrGraphQl\Resolver\QueryResolver'
+              Node: 'Wwwision\CrGraphQl\Resolver\NodeResolver'
+Wwwision:
+  CR:
+    GraphQL:
+      normalizers:
+        'DateTime':
+          className: 'Symfony\Component\Serializer\Normalizer\DateTimeNormalizer'
+        'Image':
+          className: 'Wwwision\CrGraphQl\Normalizer\ImageNormalizer'
+        'Asset':
+          className: 'Wwwision\CrGraphQl\Normalizer\AssetNormalizer'
+        'Node':
+          className: 'Wwwision\CrGraphQl\Normalizer\NodeNormalizer'

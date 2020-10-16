@@ -1,0 +1,5 @@
+Wwwision\CrGraphQl\Resolver\NodeResolver:
+  arguments:
+    2:
+      object:
+        factoryObjectName: Wwwision\CrGraphQl\SerializerFactory
