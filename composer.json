@@ -5,8 +5,8 @@
     "license": "MIT",
     "require": {
         "neos/flow": "*",
-        "t3n/graphql": "^2.1",
-        "neos/content-repository": "^5.0",
+        "t3n/graphql": "^2.1 | ^3.0",
+        "neos/content-repository": "^5.0 | ^7.0",
         "symfony/serializer": "^5.1"
     },
     "autoload": {
