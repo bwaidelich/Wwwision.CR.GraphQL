@@ -54,7 +54,7 @@ privilegeTargets:
 
   'Neos\Flow\Security\Authorization\Privilege\Method\MethodPrivilege':
 
-    't3n.GraphQL:Endpoint':
+    'Some.Package:GraphQL.Endpoint':
       matcher: 'method(t3n\GraphQL\Controller\GraphQLController->queryAction(endpoint=="Wwwision_CR_GraphQL"))'
 
 roles:
@@ -62,7 +62,7 @@ roles:
   'Neos.Flow:Everybody':
     privileges:
       -
-        privilegeTarget: 't3n.GraphQL:Endpoint'
+        privilegeTarget: 'Some.Package:GraphQL.Endpoint'
         permission: GRANT
 ```
 
